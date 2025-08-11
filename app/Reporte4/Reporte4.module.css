@@ -1,0 +1,96 @@
+.container {
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Selects e inputs */
+.select,
+.input {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 10px;
+}
+
+.select:focus,
+.input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+}
+
+/* Botón */
+.button {
+  padding: 8px 14px;
+  background-color: #0074b7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #005a91;
+}
+
+.button:disabled {
+  background-color: #a0c4f6;
+  cursor: not-allowed;
+}
+
+/* Caja de resultado */
+.resultBox {
+  background-color: #e6f3ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Tabla */
+.table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #0074b7;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.table td {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f9ff;
+}
+
+.table tr:nth-child(odd) {
+  background-color: white;
+}
+
+/* Mensaje de error */
+.error {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}

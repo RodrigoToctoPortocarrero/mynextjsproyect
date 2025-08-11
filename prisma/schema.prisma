@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model clase {
+  idclase      Int      @id @default(autoincrement())
+  idcurso      Int
+  iddocente    Int
+  fechaclase   DateTime @db.Date
+  tituloclase  String   @db.VarChar(100)
+  presentacion Boolean
+  competencia  String
+  fechaentrega DateTime @default(dbgenerated("CURRENT_DATE")) @db.Date
+  grados       String
+  curso        curso    @relation(fields: [idcurso], references: [idcurso], onDelete: NoAction, onUpdate: NoAction)
+  docente      docente  @relation(fields: [iddocente], references: [iddocente], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model competencia {
+  idcompetencia     Int    @id @default(autoincrement())
+  nombrecompetencia String @db.VarChar(100)
+  idcurso           Int
+  curso             curso  @relation(fields: [idcurso], references: [idcurso], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model curso {
+  idcurso     Int           @id @default(autoincrement())
+  nombrecurso String        @db.VarChar(100)
+  clase       clase[]
+  competencia competencia[]
+}
+
+model docente {
+  iddocente       Int     @id @default(autoincrement())
+  nombre          String  @db.VarChar(100)
+  apellidopaterno String  @db.VarChar(100)
+  apellidomaterno String  @db.VarChar(100)
+  clase           clase[]
+}

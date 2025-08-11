@@ -1,0 +1,86 @@
+.reporteContainer {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f9fcff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dateInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.dateInput:focus {
+  border-color: #00b4d8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 180, 216, 0.4);
+}
+
+.button {
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #023e8a;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.table thead {
+  background-color: #0077b6;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2faff;
+}
+
+.table tbody tr:hover {
+  background-color: #e0f4ff;
+}
+
+.noData {
+  text-align: center;
+  margin-top: 20px;
+  color: #d9534f;
+  font-weight: bold;
+}
